@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Web</title>
-    <link rel="stylesheet" href="portafolio.css">
-    <script src="portafolio.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio Web - Facundo Bentancur</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header id="encabezado" class="encabezado">
-    <a href="https://www.instagram.com/ruloo_25/" target="_blank">
-        <img class="redes" id="logoInstagram" src="https://images.icon-icons.com/1945/PNG/512/iconfinder-instagram-4661602_122473.png" alt="instagram">
-    </a>
-    <a href="https://www.linkedin.com/in/facundo-bentancur-cuadro-3a7a3128a/" target="_blank">
-        <img class="redes" id="logoLinkedin" src="https://images.icon-icons.com/805/PNG/512/linkedin_icon-icons.com_65929.png" alt="Linkedin">
-    </a>
-    <a href="fbentancurcuador@gmail.com" target="_blank">
-        <img class="redes" id="logoGmail" src="https://images.icon-icons.com/1381/PNG/512/gmailoffline_94931.png" alt="gmail">
-    </a>
-    <a href="http://127.0.0.1:5500/Portafolio%20Web/portafolio.html" target="_blank">
-        <img id="logo" src="Imágenes\Logo portafolio web.png" alt="logo">
-    </a>
-        <h1>FACUNDO BENTANCUR</h1>
-        <p>Estudiante de Desarrollo Web</p>
-        <hr>
-</header>
-    <main>
-        <section>
-            <article class="presentacion">                    
-                <h3>Acerca de mi_</h3>
-                <p id="pPresentacion">Mi nombre es Facundo Bentancur. Soy de 25 de Mayo, Florida. <br>
-                    Mi camino profesional dio un giro al encontrar en el Desarrollo mi verdadera vocación, ya que si bien mis estudios y experiencias laborales previas no estuvieron directamente relacionados con esta disciplina, descubrí que TI es lo que quiero para mi futuro, por lo que desde entonces, me he dedicado con pasión a desarrollarme en este campo.
-                </p>
-                <img id="fotoPersonal" src="Imágenes\Foto_Personal.jpeg" alt="fotoPresentacion">
-            </article>
-        </section>
-<hr>
-        <section>
-            <article class="objetivos">
-                <h3>Objetivos_</h3>
-                <p>Seguir formándome y creciendo en el mundo TI hasta obtener una oportunidad laboral dentro del rubro, que me permita demostrar de lo que soy capaz, y lo que tengo para aportar a los equipos de trabajo.</p>
-            </article>
-        </section>
-    </main>
-<hr>
-    <footer id="pie-de-pagina">
-        <p>Portafolio Web - Jóvenes a Programar 2025 - Grupo 312</p>
-    </footer>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar-sticky">
+    <div class="logo">FACUNDO</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#presentacion">Acerca de mí</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/ruloo_25/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/facundo-bentancur-cuadro-3a7a3128a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:fbentancurcuador@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </header>
+
+  <!-- ===== LATERAL MENU ===== -->
+  <nav id="sideMenu" class="side-menu hidden">
+    <ul>
+      <li><a href="#presentacion">Acerca de mí</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <h1>FACUNDO BENTANCUR</h1>
+    <p>Estudiante de Desarrollo Web</p>
+    <img id="fotoPersonalHero" src="Imágenes/Foto_Personal.jpeg" alt="Foto Personal">
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <section id="presentacion" class="hidden">
+      <h3>Acerca de mí_</h3>
+      <p>
+        Mi nombre es Facundo Bentancur. Soy de 25 de Mayo, Florida. <br>
+        Mi camino profesional dio un giro al encontrar en el Desarrollo mi verdadera vocación, ya que si bien mis estudios y experiencias laborales previas no estuvieron directamente relacionados con esta disciplina, descubrí que TI es lo que quiero para mi futuro, por lo que desde entonces, me he dedicado con pasión a desarrollarme en este campo.
+      </p>
+    </section>
+
+    <section id="objetivos" class="hidden">
+      <h3>Objetivos_</h3>
+      <p>
+        Seguir formándome y creciendo en el mundo TI hasta obtener una oportunidad laboral dentro del rubro, que me permita demostrar de lo que soy capaz, y lo que tengo para aportar a los equipos de trabajo.
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="pie-de-pagina">
+    <p>Portafolio Web - Jóvenes a Programar 2025 - Grupo 312</p>
+  </footer>
+
+  <script src="portafolio.js"></script>
 </body>
 </html>
