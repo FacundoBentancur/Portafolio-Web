@@ -24,7 +24,7 @@ html, body {
 
 body { flex: 1; }
 
-/* Logo con imagen */
+/* ===== LOGO ===== */
 .logo img {
     width: 55px;
     height: auto;
@@ -37,7 +37,6 @@ body { flex: 1; }
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(30,228,218,0.6);
 }
-
 
 /* ===== NAVBAR ===== */
 .navbar-sticky {
@@ -64,7 +63,8 @@ body { flex: 1; }
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: #0fa39c;
 }
 
@@ -74,29 +74,6 @@ body { flex: 1; }
     color: aquamarine;
     cursor: pointer;
 }
-
-/* ===== LATERAL MENU ===== */
-.side-menu {
-    position: fixed;
-    top: 100px;
-    left: 10px;
-    background: rgba(0,0,0,0.6);
-    padding: 10px 15px;
-    border-radius: 10px;
-}
-
-.side-menu ul { list-style: none; }
-
-.side-menu ul li a {
-    display: block;
-    text-decoration: none;
-    color: aquamarine;
-    padding: 5px 0;
-}
-
-.side-menu ul li a:hover { color: #0fa39c; }
-
-.hidden { display: none; }
 
 /* ===== HERO ===== */
 .hero {
@@ -109,8 +86,17 @@ body { flex: 1; }
     padding: 20px;
 }
 
-.hero h1 { font-size: 50px; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
-.hero p { font-size: 22px; margin-bottom: 20px; color: #e0f7f4; }
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #e0f7f4;
+}
 
 #fotoPersonalHero {
     width: 200px;
@@ -120,9 +106,16 @@ body { flex: 1; }
     transition: transform 0.3s ease;
 }
 
-#fotoPersonalHero:hover { transform: scale(1.1); }
+#fotoPersonalHero:hover {
+    transform: scale(1.1);
+}
 
 /* ===== REDES SOCIALES ===== */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
 .social-icons a i {
     font-size: 28px;
     color: aquamarine;
@@ -135,30 +128,195 @@ body { flex: 1; }
 }
 
 /* ===== SECCIONES ===== */
-main { flex: 1; padding: 40px; }
-
-section { max-width: 800px; margin: 0 auto; text-align: left; }
-
-.fade-in {
-    display: block !important;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInMove 0.8s ease forwards;
+main {
+    flex: 1;
+    padding: 40px;
 }
 
-@keyframes fadeInMove {
-    to { opacity: 1; transform: translateY(0); }
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    padding-bottom: 60px;
 }
 
-.fade-out {
-    display: block !important;
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeOutMove 0.8s ease forwards;
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: aquamarine;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
-@keyframes fadeOutMove {
-    to { opacity: 0; transform: translateY(20px); }
+/* ===== ACERCA DE MÍ ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.about-card {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+.about-card i {
+    font-size: 2rem;
+    color: #0fa39c;
+    margin-bottom: 10px;
+}
+
+.about-card h4 {
+    margin-bottom: 10px;
+    color: aquamarine;
+}
+
+.about-card p,
+.about-card li {
+    color: #e0f7f4;
+    font-size: 0.95rem;
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-card ul li {
+    margin-bottom: 6px;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-container {
+    background: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    padding: 15px 20px;
+}
+
+.timeline-container h4 {
+    color: aquamarine;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline {
+    position: relative;
+    margin-left: 0;
+    padding-left: 40px;
+    border-left: 3px solid #0fa39c;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: #0fa39c;
+    border: 3px solid aquamarine;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.timeline-item:hover {
+    max-height: 400px;
+}
+
+.timeline-item h5 {
+    color: aquamarine;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: #e0f7f4;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ===== TECNOLOGÍAS ===== */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tech-stack span {
+    background: rgba(15,163,156,0.2);
+    border: 1px solid #0fa39c;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: aquamarine;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tech-stack span:hover {
+    background: rgba(15,163,156,0.4);
+    transform: scale(1.05);
+}
+
+/* ===== OBJETIVOS (TIMELINE) ===== */
+.timeline-item h4,
+.timeline-item h5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== PROYECTOS ===== */
+.proyectos-lista {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.proyectos-lista li {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.proyectos-lista a {
+    color: aquamarine;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.proyectos-lista a:hover {
+    color: #0fa39c;
+    text-decoration: underline;
 }
 
 /* ===== FOOTER ===== */
@@ -172,4 +330,24 @@ section { max-width: 800px; margin: 0 auto; text-align: left; }
 #pie-de-pagina p {
     color: black;
     font-family: 'Lucida Sans', sans-serif;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 40px; }
+    .hero p { font-size: 18px; }
+}
+
+/* Smartphones grandes */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0,0,0,0.9);}
 }

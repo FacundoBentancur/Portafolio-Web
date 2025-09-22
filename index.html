@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio Web - Facundo Bentancur</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Web - Facundo Bentancur</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- ===== NAVBAR ===== -->
   <header class="navbar-sticky">
-  
-  <a href="#" class="logo">
-    <img src="Imágenes/Logo_portafolio_web.png" alt="Logo Portafolio" id="logoImg">
-  </a>
-
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#presentacion">Acerca de mí</a></li>
-      <li><a href="#objetivos">Objetivos</a></li>
-    </ul>
-  </nav>
-
-  <div class="social-icons">
-    <a href="https://www.instagram.com/ruloo_25/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/facundo-bentancur-cuadro-3a7a3128a/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:fbentancurcuador@gmail.com"><i class="fas fa-envelope"></i></a>
-  </div>
-  <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-</header>
-
-
-  <!-- ===== MENU LATERAL ===== -->
-  <nav id="sideMenu" class="side-menu hidden">
-    <ul>
-      <li><a href="#presentacion">Acerca de mí</a></li>
-      <li><a href="#objetivos">Objetivos</a></li>
-    </ul>
-  </nav>
+    <a href="#hero" class="logo">
+      <img src="Imágenes/Logo_portafolio_web.png" alt="Logo Portafolio" id="logoImg">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#presentacion">Acerca de mí</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="https://github.com/FacundoBentancur" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/facundo-bentancur-cuadro-3a7a3128a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:fbentancurcuador@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </header>
 
   <!-- ===== HERO ===== -->
   <section id="hero" class="hero">
@@ -48,19 +37,137 @@
 
   <!-- ===== MAIN ===== -->
   <main>
-    <section id="presentacion" class="hidden">
-      <h3>Acerca de mí_</h3>
-      <p>
-        Mi nombre es Facundo Bentancur. Soy de 25 de Mayo, Florida. <br>
-        Mi camino profesional dio un giro al encontrar en el Desarrollo mi verdadera vocación, ya que si bien mis estudios y experiencias laborales previas no estuvieron directamente relacionados con esta disciplina, descubrí que TI es lo que quiero para mi futuro, por lo que desde entonces, me he dedicado con pasión a desarrollarme en este campo.
-      </p>
+    <section id="presentacion">
+  <h3>Acerca de mí</h3>
+  <div class="about-grid">
+
+    <!-- Información básica -->
+    <div class="about-card">
+      <i class="fas fa-location-dot"></i>
+      <h4>Ubicación</h4>
+      <p>25 de Mayo, Florida, Uruguay</p>
+
+      <i class="fas fa-calendar-alt"></i>
+      <h4>Nacimiento</h4>
+      <p>25/06/1997</p>
+    </div>
+
+    <!-- Educación -->
+    <div class="timeline-container">
+      <h4><i class="fas fa-graduation-cap"></i> Formación</h4>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h5>Testing de Web Services | CES – 2024</h5>
+          <p>Centro de Ensayo de Software (CES), Uruguay</p>
+        </div>
+        <div class="timeline-item">
+          <h5>Bootcamp Testing de Software | Udemy – 2023</h5>
+          <p>Aprendizaje completo de testing de software desde 0 a 100.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>Desarrollo Web | Jóvenes a Programar CEIBAL – 2025</h5>
+          <p>HTML, CSS, JavaScript y React aplicados en proyectos reales.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>Python | Autodidacta – Actualidad</h5>
+          <p>Aprendizaje continuo de programación y automatización.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experiencia -->
+    <div class="timeline-container">
+      <h4><i class="fas fa-briefcase"></i> Experiencia</h4>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h5>Bartender | Native Bar | Malta | 09/2023 – 10/2024</h5>
+          <p>Atención al cliente en entornos de alta presión, desarrollando comunicación efectiva.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>Operario de Logística | Amazon | Leipzig, Alemania | 03/2023 – 08/2023</h5>
+          <p>Clasificación y gestión de paquetes con cumplimiento de KPIs diarios. Trabajo en equipo, organización y precisión.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>Mecánico Automotriz | Nami Ltda | Uruguay | 2017 – 2022</h5>
+          <p>Reparaciones y revisiones en sistemas de refrigeración automotriz. Diagnóstico y solución de problemas técnicos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tecnologías -->
+    <div class="about-card">
+      <i class="fas fa-code"></i>
+      <h4>Tecnologías Desarrollo Web</h4>
+      <div class="tech-stack">
+        <span><i class="fab fa-html5"></i> HTML</span>
+        <span><i class="fab fa-css3-alt"></i> CSS</span>
+        <span><i class="fab fa-js"></i> JavaScript</span>
+        <span><i class="fab fa-react"></i> React</span>
+        <span><i class="fa-brands fa-python"></i> Python</span>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <i class="fas fa-bug"></i>
+      <h4>Tecnologías Testing</h4>
+      <div class="tech-stack">
+        <span>Postman</span>
+        <span>Soap UI</span>
+        <span>Jira</span>
+        <span>Mantis</span>
+        <span>JUnit</span>
+        <span>XRay</span>
+      </div>
+    </div>
+
+    <!-- Idiomas -->
+    <div class="about-card">
+      <i class="fas fa-globe"></i>
+      <h4>Idiomas</h4>
+      <div class="tech-stack">
+        <span><i class="fa-solid fa-language"></i> Español nativo</span>
+        <span><i class="fa-solid fa-language"></i> Inglés B3</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="objetivos">
+  <h3>Objetivos</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4><i class="fas fa-laptop-code"></i> Primer empleo en TI</h4>
+      <p>Conseguir mi primera experiencia laboral en desarrollo web o Testing.</p>
+    </div>
+    <div class="timeline-item">
+      <h4><i class="fas fa-graduation-cap"></i> Seguir capacitándome</h4>
+      <p>Profundizar en frameworks modernos y metodologías ágiles.</p>
+    </div>
+    <div class="timeline-item">
+      <h4><i class="fas fa-users"></i> Trabajo en equipo</h4>
+      <p>Aportar mis habilidades y aprender de otros profesionales.</p>
+    </div>
+    <div class="timeline-item">
+      <h4><i class="fas fa-rocket"></i> Proyectos desafiantes</h4>
+      <p>Participar en desarrollos innovadores con impacto real.</p>
+    </div>
+    </div>
     </section>
 
-    <section id="objetivos" class="hidden">
-      <h3>Objetivos_</h3>
-      <p>
-        Seguir formándome y creciendo en el mundo TI hasta obtener una oportunidad laboral dentro del rubro, que me permita demostrar de lo que soy capaz, y lo que tengo para aportar a los equipos de trabajo.
-      </p>
+    <section id="proyectos">
+      <h3>Proyectos</h3>
+      <ul class="proyectos-lista">
+        <li>
+          <a href="https://facundobentancur.github.io/Proyecto-Final/" target="_blank">
+            Proyecto Final - Jóvenes a Programar 2025 (En desarrollo) <br>
+          </a> - Contamos con un workspace inicial, al cuál le vamos agregando funcionalidades y modificando el estilo para darle nuestro toque personal (grupal).
+        </li>
+        <li>
+          <a href="https://facundobentancur.github.io/Formulario-de-Registro/" target="_blank">
+            Formulario de Registro <br>
+          </a> - Actividad de taller del curso Jap, que requería crear un formulario de registro con algunas condiciones básicas (especialmente en cuanto a caracteres).
+        </li>
+      </ul>
     </section>
   </main>
 
